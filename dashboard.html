@@ -1,0 +1,87 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | BhojanRight</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+</head>
+<body>
+  <header class="header">
+    <img src="images/logo.png" alt="BhojanRight Logo" class="logo" width="200" height="60">
+    <h1>BhojanRight</h1>
+    <p>"Because hunger is not fate—it's a failure of distribution."</p>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="donate.html" class="nav-link">Donate</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="team.html" class="nav-link">Team</a>
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <div class="card">
+        <h2 class="section-title">Fundraising Dashboard</h2>
+        <div class="highlight-card">
+          <p><strong>Our fundraising campaign is just getting started!</strong> Be the first to contribute and help us reach our goal of ₹10 Crore to expand food redistribution across India.</p>
+        </div>
+        
+        <h3>Fundraising Goal: ₹10,00,00,000</h3>
+        <div class="progress-bar">
+          <div class="progress" id="fundraising-progress" style="width: 0%"></div>
+        </div>
+        <p id="raised-amount">₹0 raised so far</p>
+        
+        <div class="dashboard-stats">
+          <div class="stat-card">
+            <div class="stat-number" id="total-donors">0</div>
+            <p>Total Donors</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" id="avg-donation">₹0</div>
+            <p>Average Donation</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" id="days-active">1</div>
+            <p>Days Active</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="card">
+        <h2 class="section-title">Real-Time Donation Tracker</h2>
+        <div id="donation-tracker">
+          <div class="empty-state">
+            <p>No donations yet. Your contribution could be the first!</p>
+            <a href="donate.html" class="btn">Make First Donation</a>
+          </div>
+          <!-- Dynamic donations will appear here -->
+        </div>
+        
+        <div class="real-time-update">
+          <p>Last updated: <span id="last-updated">Just now</span></p>
+          <button id="refresh-btn" class="btn">Refresh Data</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-contact">
+      <p>Contact us: <a href="mailto:bandabablu4@gmail.com">bandabablu4@gmail.com</a> | 
+      <a href="https://instagram.com/bhojanright" target="_blank">@bhojanright</a></p>
+    </div>
+    <p>&copy; 2025 BhojanRight. Hunger is a distribution issue—not a destiny.</p>
+  </footer>
+
+  <script src="./dashboard.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>

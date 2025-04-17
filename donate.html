@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate | BhojanRight</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+</head>
+<body>
+  <header class="header">
+    <img src="images/logo.png" alt="BhojanRight Logo" class="logo" width="200" height="60">
+    <h1>BhojanRight</h1>
+    <p>"Because hunger is not fate—it's a failure of distribution."</p>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="donate.html" class="nav-link">Donate</a>
+      <a href="team.html" class="nav-link">Team</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <div class="card">
+        <h2 class="section-title">Support Our Mission</h2>
+        <p>Your donation helps end hunger and food waste. Every ₹25 provides one meal to someone in need.</p>
+        
+        <div class="highlight-card">
+          <h3>How Your Donation Helps</h3>
+          <ul class="list">
+            <li class="list-item">₹25 = 1 meal for a hungry person</li>
+            <li class="list-item">₹500 = 20 meals</li>
+            <li class="list-item">₹1,000 = 40 meals</li>
+            <li class="list-item">₹5,000 = 200 meals</li>
+          </ul>
+        </div>
+        
+        <form class="form">
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" id="name" class="form-input" required>
+          
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-input" required>
+          
+          <label for="amount" class="form-label">Donation Amount (₹)</label>
+          <input type="number" id="amount" class="form-input" min="25" step="25" required>
+          
+          <label for="message" class="form-label">Message (Optional)</label>
+          <textarea id="message" class="form-input" rows="3"></textarea>
+          
+          <button type="submit" class="btn">Donate Now</button>
+        </form>
+        
+        <p style="margin-top: 1rem;"><small>* Secure payment processing via Razorpay. Tax receipts provided.</small></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 BhojanRight. Hunger is a distribution issue—not a destiny. All rights reserved.</p>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+</html>

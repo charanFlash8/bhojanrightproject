@@ -1,0 +1,556 @@
+:root {
+    --primary: #27ae60;
+    --primary-dark: #219150;
+    --secondary: #2c3e50;
+    --light-bg: #f9f9f9;
+    --card-bg: #ecf9f1;
+    --white: #ffffff;
+    --shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--light-bg);
+    color: var(--secondary);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Header */
+  .header {
+    background: var(--primary);
+    color: var(--white);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+  
+  .logo {
+    height: 60px;
+    width: auto;
+    margin-bottom: 0.75rem;
+  }
+  
+  h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    font-weight: 800;
+    margin: 0 0 0.5rem;
+    line-height: 1.2;
+  }
+  
+  .header p {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-bottom: 1rem;
+  }
+  
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+  
+  .nav-link:hover, .nav-link:focus {
+    background: rgba(255,255,255,0.2);
+    outline: none;
+  }
+  
+  /* Main content */
+  .main {
+    flex: 1;
+  }
+  
+  .section {
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 1.25rem;
+    color: var(--primary-dark);
+  }
+  
+  .card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .highlight-card {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-left: 6px solid var(--primary);
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+  
+  /* Forms */
+  .form {
+    display: grid;
+    gap: 0.75rem;
+    max-width: 400px;
+    margin-top: 1.5rem;
+  }
+  
+  .form-input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+  }
+  
+  .btn {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    padding: 0.8rem;
+    border-radius: 6px;
+  }
+  
+  .btn:hover, .btn:focus {
+    background: var(--primary-dark);
+  }
+  
+  /* Lists */
+  .list {
+    padding-left: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .list-item {
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Links */
+  .link {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .link:hover, .link:focus {
+    color: var(--primary-dark);
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  .footer {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: auto;
+  }
+  
+  /* Accessibility improvements */
+  :focus {
+    outline: 2px solid var(--primary-dark);
+    outline-offset: 2px;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* Homepage Hero */
+  .hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  /* Stats Section */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .stat-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Blog */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .blog-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  
+  .blog-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .blog-content {
+    padding: 1.5rem;
+  }
+  
+  .blog-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-meta {
+    color: #666;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Dashboard */
+  .progress-bar {
+    height: 30px;
+    background: #eee;
+    border-radius: 15px;
+    margin: 1rem 0;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background: var(--primary);
+    width: 0%;
+    transition: width 1s ease;
+  }
+  
+  .dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  /* Subscribe Form */
+  .subscribe-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    .cta-buttons {
+      flex-direction: column;
+    }
+    
+    .stats {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Fundraiser Cards */
+.fundraiser-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .fundraiser-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .fundraiser-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+  
+  .fundraiser-card p {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+  }
+  
+  .fundraiser-card .btn {
+    align-self: flex-start;
+  }
+
+  /* Dashboard Specific Styles */
+.progress-bar {
+    height: 30px;
+    background: #eee;
+    border-radius: 15px;
+    margin: 1rem 0;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background: var(--primary);
+    width: 0%;
+    transition: width 0.5s ease;
+  }
+  
+  .dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .empty-state {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .empty-state p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .empty-state .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #27ae60;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+  }
+ 
+  .donation-card {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--primary);
+  }
+  
+  .real-time-update {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  /* ===== Buttery Smooth Animations ===== */
+:root {
+    --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    --ease-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  /* Button Animations */
+  .btn {
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+    transition: 
+      transform 0.4s var(--ease-out-quad),
+      background 0.4s var(--ease-out-quad),
+      box-shadow 0.4s var(--ease-out-quad);
+    will-change: transform;
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
+  
+  .btn:active {
+    transform: translateY(1px) scale(0.98);
+  }
+  
+  .btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    transform: translateX(-100%) skewX(-15deg);
+    transition: transform 0.6s var(--ease-out-quad);
+  }
+  
+  .btn:hover::after {
+    transform: translateX(100%) skewX(-15deg);
+  }
+  
+  /* Card Animations */
+  .card, .stat-card, .blog-card, .contact-card {
+    transition: 
+      transform 0.6s var(--ease-out-quad),
+      box-shadow 0.6s var(--ease-out-quad);
+    will-change: transform;
+  }
+  
+  .card:hover, .stat-card:hover, 
+  .blog-card:hover, .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  }
+  
+  /* Navigation Animations */
+  .nav-link {
+    position: relative;
+    transition: color 0.3s var(--ease-out-quad);
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--white);
+    transition: width 0.4s var(--ease-out-quad);
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Form Field Animations */
+  .form-input {
+    transition: 
+      border-color 0.3s var(--ease-out-quad),
+      box-shadow 0.3s var(--ease-out-quad),
+      transform 0.3s var(--ease-out-quad);
+  }
+  
+  .form-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.2);
+    transform: scale(1.01);
+  }
+  
+  /* Page Transition Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  main {
+    animation: fadeIn 0.8s var(--ease-out-quad) forwards;
+  }
+  
+  /* Progress Bar Animation */
+  .progress {
+    transition: width 1.2s var(--ease-elastic);
+  }
+  
+  /* Floating Animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .floating {
+    animation: float 6s var(--ease-in-out-quad) infinite;
+  }
+  
+  /* Ripple Effect */
+  .ripple {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    transform: scale(0);
+    animation: ripple 0.6s var(--ease-out-quad);
+    pointer-events: none;
+  }
+  
+  @keyframes ripple {
+    to {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  body {
+    opacity: 0;
+    transition: opacity 0.8s var(--ease-out-quad);
+  }
+  
+  body.loaded {
+    opacity: 1;
+  }
